@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Iplayer Pod</title>
+    <description>Programmes downloaded from IPlayer</description>
+    <link>http://mexico</link>
+    <language>en-uk</language>
+    <copyright>Copyright 2015</copyright>
+    <lastBuildDate>Tue, 16 Jun 2015 22:21:57 +0100</lastBuildDate>
+    <pubDate>Tue, 16 Jun 2015 22:21:57 +0100</pubDate>
+    <docs>http://mexico</docs>
+    <webMaster>andrew.cowper@slothrop.net</webMaster>
+    <item>
+      <title>Stuart Maconies Freakier Zone - 1960s Electronica</title>
+      <link>http://mexico</link>
+      <guid>b05ywz61</guid>
+      <description>Stuart presents an hour playlist of pioneering electronic sounds from the 1960s including Silver Apples, Morton Subotnick and Raymond Scott.</description>
+      <enclosure url="http://mexico/media/Stuart_Maconies_Freakier_Zone_-_1960s_Electronica_b05ywz61_default.m4a" length="0" type="audio/m4a">
+      </enclosure>
+      <category>Podcasts</category>
+      <pubDate>Sun, 14 Jun 2015 00:00:00 +0100</pubDate>
+    </item>
+    <item>
+      <title>Stuart Maconies Freak Zone - Station to Station A 30-Day Happening</title>
+      <link>http://mexico</link>
+      <guid>b05yx90p</guid>
+      <description>Stuart finds out about Doug Aitken's Station To Station: A 30 Day Happening hosted by the Barbican Centre this summer. The music events include Terry Riley creating a new piece, New York art rockers Suicide and an 88-cymbal, 8-guitar orchestra put together by Japanese noiseniks Boredoms.</description>
+      <enclosure url="http://mexico/media/Stuart_Maconies_Freak_Zone_-_Station_to_Station_A_30-Day_Happening_b05yx90p_default.m4a" length="0" type="audio/m4a">
+      </enclosure>
+      <category>Podcasts</category>
+      <pubDate>Sun, 14 Jun 2015 20:00:00 +0100</pubDate>
+    </item>
+    <item>
+      <title>Tom Ravenscroft - Lower Dens guest mix</title>
+      <link>http://mexico</link>
+      <guid>b05y143w</guid>
+      <description>The Baltimore four-piece Lower Dens lead by songwriter and guitarist Jana Hunter provide this week's guest mix for Tom. Jana also co-produced their latest album Escape from Evil, the follow up to 2012's Nootropics.</description>
+      <enclosure url="http://mexico/media/Tom_Ravenscroft_-_Lower_Dens_guest_mix_b05y143w_default.m4a" length="0" type="audio/m4a">
+      </enclosure>
+      <category>Podcasts</category>
+      <pubDate>Fri, 12 Jun 2015 21:00:00 +0100</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -1,10 +1,11 @@
 (ns podcast.info
+  (require [podcast.props :refer :all])
   (import [java.io File]
           [org.joda.time.format DateTimeFormat]
           [org.joda.time DateTime]))
 
 (defn info-lines []
-  (into [] (.split (slurp "/Users/bloat/git/podcast/info.txt") "\n")))
+  (into [] (.split (slurp (str install "info.txt")) "\n")))
 
 (defn program-lines [info-lines]
   (partition 4 info-lines))
@@ -13,7 +14,7 @@
   (.substring line 16))
 
 (defn url [line]
-  (str "http://mexico/media/" (.substring line 30)))
+  (str media-url (.substring line 30)))
 
 (defn title [line]
   (.replace (.substring line 30 (- (count line) 21)) \_ \space))

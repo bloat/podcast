@@ -1,6 +1,7 @@
 (ns podcast.xml
   (require [clojure.data.xml :as xml]
-           [clojure.java.io :as io])
+           [clojure.java.io :as io]
+           [podcast.props :refer :all])
   (import [org.joda.time.format DateTimeFormat]
           [org.joda.time DateTime]))
 
@@ -10,7 +11,7 @@
 (defn make-item-sexp [{title :title guid :guid description :description url :url length :length date :date}]
   [:item
    [:title title]
-   [:link "http://mexico"]
+   [:link home-page]
    [:guid guid]
    [:description description]
    [:enclosure {:url url :length (str length) :type "audio/m4a"}]
@@ -23,13 +24,13 @@
           :channel
           [:title "Iplayer Pod"]
           [:description "Programmes downloaded from IPlayer"]
-          [:link "http://mexico"]
+          [:link home-page]
           [:language "en-uk"]
           [:copyright (str "Copyright " (.print year-pattern (DateTime.)))]
           [:lastBuildDate (.print item-pattern date)]
           [:pubDate (.print item-pattern date)]
-          [:docs "http://mexico"]
-          [:webMaster "andrew.cowper@slothrop.net"]
+          [:docs home-page]
+          [:webMaster email]
           (map make-item-sexp items))])
 
 (defn write-rss [items date file]

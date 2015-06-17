@@ -1,9 +1,11 @@
 (ns podcast.rss
   (require [podcast.xml :refer [write-rss]]
-           [podcast.info :refer [info]])
+           [podcast.info :refer [info]]
+           [podcast.props :refer [http-root]])
   (import [org.joda.time DateTime]))
 
-(write-rss (info) (DateTime.) "/Users/bloat/git/podcast/feed.rss")
+(defn main- []
+  (write-rss (info) (DateTime.) (str http-root "radio6.rss")))
 
 
 

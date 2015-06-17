@@ -1,0 +1,19 @@
+###################
+# Iplayer Podcast
+
+# Run saved searched - this are configured and stored in get_iplayer itself
+23 * * * * get_iplayer -o $HOME/Downloads/iplayer --pvr 
+
+# Look at the downloaded files, extract their iplayer pid, use get_iplayer to download program info using the pid
+27 * * * * for i in `ls $HOME/Downloads/iplayer/*.m4a`; do echo $i; echo $i | awk -F _ '{print $(NF-1)}' | xargs /usr/local/bin/get_iplayer --info --type=radio --pid | egrep "(lastbcast:|filename:|desclong:)" | grep -v original; done  > $HOME/Downloads/iplayer/info.txt 2>&1
+
+# Remove older media files
+06 * * * * find /usr/share/nginx/html/media -name "*.m4a" -mtime 14 -exec rm -v {} \;
+06 * * * * find $HOME/Downloads/iplayer -name "*.m4a" -mtime 14 -exec rm -v {} \;
+
+# Copy files from the download location to the web server
+06 * * * * cp -n $HOME/Downloads/iplayer/*.m4a /usr/share/nginx/html/media
+
+# Generate the rss
+0 3 * * * $HOME/installs/podcast/podcast.sh
+
