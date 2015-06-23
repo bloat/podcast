@@ -5,7 +5,7 @@
           [org.joda.time DateTime]))
 
 (defn info-lines []
-  (into [] (.split (slurp (str install "info.txt")) "\n")))
+  (into [] (.split (slurp (str downloads "info.txt")) "\n")))
 
 (defn program-lines [info-lines]
   (partition 4 info-lines))

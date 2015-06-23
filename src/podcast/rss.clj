@@ -4,7 +4,7 @@
            [podcast.props :refer [http-root]])
   (import [org.joda.time DateTime]))
 
-(defn main- []
+(defn -main []
   (write-rss (info) (DateTime.) (str http-root "radio6.rss")))
 
 
